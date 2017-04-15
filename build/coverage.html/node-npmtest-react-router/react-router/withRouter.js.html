@@ -197,16 +197,16 @@
     <h1>Code coverage report for <span class="entity">node-npmtest-react-router/react-router/withRouter.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">47.62% <small>(10 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">40.54% <small>(15 / 37)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">50% <small>(5 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">35.71% <small>(5 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">20% <small>(1 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">16.67% <small>(1 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">64.29% <small>(9 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">63.64% <small>(14 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
@@ -246,7 +246,24 @@
 30
 31
 32
-33</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -260,7 +277,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -268,11 +295,18 @@
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -288,25 +322,42 @@ var _react = require('react');
 &nbsp;
 var _react2 = _interopRequireDefault(_react);
 &nbsp;
+var _propTypes = require('prop-types');
+&nbsp;
+var _propTypes2 = _interopRequireDefault(_propTypes);
+&nbsp;
+var _hoistNonReactStatics = require('hoist-non-react-statics');
+&nbsp;
+var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
+&nbsp;
 var _Route = require('./Route');
 &nbsp;
 var _Route2 = _interopRequireDefault(_Route);
 &nbsp;
 function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { default: obj }; }
 &nbsp;
+<span class="fstat-no" title="function not covered" >function _objectWithoutProperties(obj, keys) {</span> <span class="cstat-no" title="statement not covered" >var target = {}; <span class="cstat-no" title="statement not covered" ></span>for (var i in obj) { <span class="cstat-no" title="statement not covered" >if (keys.indexOf(i) &gt;= 0) <span class="cstat-no" title="statement not covered" >continue; <span class="cstat-no" title="statement not covered" ></span></span>if (!Object.prototype.hasOwnProperty.call(obj, i)) <span class="cstat-no" title="statement not covered" >continue; <span class="cstat-no" title="statement not covered" ></span></span>target[i] = obj[i]; </span>} <span class="cstat-no" title="statement not covered" ></span>return target; </span>}
+&nbsp;
 /**
  * A public higher-order component to access the imperative API
  */
 var withRouter = <span class="fstat-no" title="function not covered" >function withRouter(Component) {</span>
 <span class="cstat-no" title="statement not covered" >  var C = <span class="fstat-no" title="function not covered" >function C(props) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var wrappedComponentRef = props.wrappedComponentRef,</span>
+        remainingProps = _objectWithoutProperties(props, ['wrappedComponentRef']);
+&nbsp;
 <span class="cstat-no" title="statement not covered" >    return _react2.default.createElement(_Route2.default, { render: <span class="fstat-no" title="function not covered" >function render(routeComponentProps) {</span></span>
-<span class="cstat-no" title="statement not covered" >        return _react2.default.createElement(Component, _extends({}, props, routeComponentProps));</span>
+<span class="cstat-no" title="statement not covered" >        return _react2.default.createElement(Component, _extends({}, remainingProps, routeComponentProps, { ref: wrappedComponentRef }));</span>
       } });
   };
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  C.displayName = 'withRouter(' + (Component.displayName || Component.name) + ')';</span>
+<span class="cstat-no" title="statement not covered" >  C.WrappedComponent = Component;</span>
+<span class="cstat-no" title="statement not covered" >  C.propTypes = {</span>
+    wrappedComponentRef: _propTypes2.default.func
+  };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return C;</span>
+<span class="cstat-no" title="statement not covered" >  return (0, _hoistNonReactStatics2.default)(C, Component);</span>
 };
 &nbsp;
 exports.default = withRouter;
@@ -314,7 +365,7 @@ exports.default = withRouter;
 </table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 06:23:40 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 22:28:28 GMT+0000 (UTC)</div>
 </div>
 </body>
 </html>
