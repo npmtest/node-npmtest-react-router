@@ -1,6 +1,6 @@
 # npmtest-react-router
 
-#### test coverage for  [react-router (v4.1.1)](https://github.com/reacttraining/react-router#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-react-router.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-react-router) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-react-router.svg)](https://travis-ci.org/npmtest/node-npmtest-react-router)
+#### basic test coverage for  [react-router (v4.1.1)](https://github.com/reacttraining/react-router#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-react-router.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-react-router) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-react-router.svg)](https://travis-ci.org/npmtest/node-npmtest-react-router)
 
 #### Declarative routing for React
 
